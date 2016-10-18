@@ -1,10 +1,12 @@
 version: 1.0.{build}
 
 install:
-  - cinst docker-machine
+  - choco install -y mingw
+  - choco install -y virtualbox
+  - choco install -y docker-machine
 
 build: off
 
 before_test:
-  - docker-machine create --driver hyperv vm
-  - docker-machine ls
+  - docker-machine.exe create -d virtualbox dev
+  - docker-machine.exe env dev
