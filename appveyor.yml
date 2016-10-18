@@ -1,0 +1,7 @@
+version: 1.0.{build}
+
+install:
+  - cinst docker-machine
+
+before_test:
+  - echo "hello"
