@@ -6,4 +6,5 @@ install:
 build: off
 
 before_test:
-  - echo "hello"
+  - docker-machine create --driver hyperv vm
+  - docker-machine ls
