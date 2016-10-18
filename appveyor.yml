@@ -1,8 +1,7 @@
 version: 1.0.{build}
 
 install:
-  - choco install -y mingw
-  - choco install -y virtualbox
+  - choco install -y virtualbox --version 4.3.34
   - choco install -y docker-machine
 
 build: off
